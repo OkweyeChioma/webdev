@@ -1,0 +1,73 @@
+extends layout
+
+block content
+	#contn.container
+		.row.row-content
+			.col-sm-8
+				h2 Our Address :
+				p  8b Adenubi Close ,
+				p  Off Majekodunmi Street ,
+				p Off Allen Avenue ,
+				p Ikeja ,
+				p Lagos .
+		.row.row-content
+			.col-sm-8
+					h2  E- Channels
+					p
+					| Reach us using  any of our alternative electronic channels listed below: 
+					.row
+						.col-sm-12
+							a.btn#btn(role='button', href="tel:0908-700-1006")
+								i.fa.fa-phone
+							b : 0908-700-1006
+							br
+							br
+					.row
+						.col-sm-12
+							a.btn#btn(role='button', href="mailto:onishe2016@gmail.com")
+								i.fa.fa-envelope
+							b : onishe2016@gmail.com"	
+							br
+							br
+					.row
+						.col-sm-12
+							a.btn#btn(role='button', href="./request")
+								i.fa.fa-cart-plus
+							b : Fill out a request form
+		.row.row-content
+			.col-sm-12
+				h6 How was our delivery service ?
+				h2 Send us Feedback
+				form(action='contact/send', name='contactus', id='contactus', method='post')
+					.form-group.row
+						label.col-md-2.col-form-label(for='firstname') First Name
+						.col-md-10
+							input#firstname.form-control(type='text', name='firstname', placeholder='First Name')
+					.form-group.row
+						label.col-md-2.col-form-label(for='lastname') Last Name
+						.col-md-10
+							input#lastname.form-control(type='text', name='lastname', placeholder='Last Name')
+					.form-group.row
+						label.col-12.col-md-2.col-form-label(for='telnum') Contact Tel.
+						.col-md-10
+							input#telnum.form-control(type='tel', name='telnum', placeholder='Tel. number')
+					.form-group.row
+						label.col-md-2.col-form-label(for='emailid') Email
+						.col-md-10
+							input#emailid.form-control(type='email', name='emailid', placeholder='Email')
+					.form-group.row
+						.form-check.col-md-6.offset-md-2
+							label.form-check-label
+								input.form-check-input(type='checkbox', name='approve', value='')
+								strong May we contact you?
+						.col-md-3.offset-md-1
+							select#approve.form-control
+								option Tel.
+								option Email
+					.form-group.row
+						label.col-md-2.col-form-label(for='feedback') Your Feedback
+						.col-md-10
+							textarea#feedback.form-control(name='feedback', rows='12')
+					.form-group.row
+						.offset-md-2.col-md-10
+							button.btn#btn(type='submit') Send Feedback
